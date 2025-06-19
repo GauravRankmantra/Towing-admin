@@ -1,35 +1,37 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { 
-  LayoutDashboard, 
-  MapPin, 
-  Building2, 
-  MessageSquare, 
-  X 
-} from 'lucide-react';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import {
+  LayoutDashboard,
+  MapPin,
+  Building2,
+  MessageSquare,
+  X,
+} from "lucide-react";
 
 const navigation = [
   {
-    name: 'Dashboard',
-    href: '/admin/dashboard',
+    name: "Dashboard",
+    href: "/admin/dashboard",
     icon: LayoutDashboard,
   },
   {
-    name: 'Zip Codes',
-    href: '/admin/zip-codes',
+    name: "Zip Codes",
+    href: "/admin/zip-codes",
     icon: MapPin,
   },
   {
-    name: 'Cities',
-    href: '/admin/cities',
+    name: "Cities",
+    // href: '/admin/cities',
+    href: "/admin",
     icon: Building2,
   },
   {
-    name: 'Contact Inquiries',
-    href: '/admin/contacts',
+    name: "Contact Inquiries",
+    // href: '/admin/contacts',
+    href: "/admin",
     icon: MessageSquare,
   },
 ];
@@ -54,7 +56,7 @@ export default function Sidebar({ onClose }) {
             <p className="text-xs text-slate-400">Management Panel</p>
           </div>
         </motion.div>
-        
+
         <button
           onClick={onClose}
           className="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors"
@@ -68,7 +70,7 @@ export default function Sidebar({ onClose }) {
         {navigation.map((item, index) => {
           const isActive = pathname === item.href;
           const Icon = item.icon;
-          
+
           return (
             <motion.div
               key={item.name}
@@ -81,9 +83,10 @@ export default function Sidebar({ onClose }) {
                 onClick={onClose}
                 className={`
                   flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200
-                  ${isActive 
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg' 
-                    : 'text-slate-300 hover:text-white hover:bg-slate-700'
+                  ${
+                    isActive
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg"
+                      : "text-slate-300 hover:text-white hover:bg-slate-700"
                   }
                 `}
               >
