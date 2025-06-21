@@ -9,7 +9,7 @@ import toast from "react-hot-toast"; // Using react-hot-toast for notifications
 import { Plus, Search, MapPin, Edit, Trash2, Eye, Loader2 } from "lucide-react";
 
 // Base URL for your API
-const API_BASE_URL = "http://localhost:5000/api/v1/zip";
+const API_BASE_URL = "https://towing-backend.onrender.com/api/v1/zip";
 
 export default function ZipCodes() {
   const [showForm, setShowForm] = useState(false); // Controls visibility of the form
