@@ -238,7 +238,7 @@ export default function ZipCodes() {
   // Render the ZipCodeForm if showForm is true
   if (showForm) {
     return (
-      <div className="space-y-6 max-w-4xl mx-auto p-4 md:p-6 lg:p-8">
+      <div className="space-y-6  mx-auto p-2 md:p-6 ">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">
@@ -269,7 +269,7 @@ export default function ZipCodes() {
 
   // Render the Zip Codes list
   return (
-    <div className="space-y-6 p-4 md:p-6 lg:p-8">
+    <div className="space-y-6 p-4 md:p-6 ">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}

@@ -281,7 +281,7 @@ export default function ZipCodeForm({ onSubmit, initialData = null }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       // Use Tailwind's spacing classes for overall layout
-      className="space-y-8 p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto font-sans" 
+      className="space-y-8  sm:p-6 lg:p-8 max-w-4xl mx-auto font-sans" 
       onSubmit={handleSubmit}
     >
       {/* Zip Code Information Section */}
